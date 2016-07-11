@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>registerAdmin</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function validate(){
+                var firstName=document.getElementById("firstName").value;
+                var lastName=document.getElementById("lastName").value;
+                var email=document.getElementById("email").value;
+                var password=document.getElementById("password").value;
+                if(firstName==="" ){
+                    alert("please enter admin firstName");
+                    return  false;
+                }else if(lastName===""){
+                    alert("please enter admin lastName");
+                    return  false;
+                }else if(email===""){
+                    alert("please enter admin email");
+                    return  false;
+                }else if(password===""){
+                    alert("please enter admin password");
+                    return  false;
+                }else{
+                return true;
+                }    
+        }
+        </script>
+    </head>
+    <body>
+        <h2>add New Admin</h2>
+        <form onsubmit="return validate()" method="POST" action="registerNewAdmin">
+            <table>
+         <tr>
+                <td>
+            firstName
+               </td>
+               <td>
+            <input type="text" id="firstName" name="firstName" />
+              </td>
+         </tr>
+         <tr>
+                <td>
+            lastName
+               </td>
+               <td>
+            <input type="text" id="lastName" name="lastName" />
+              </td>
+         </tr>
+         
+         <tr>
+             <td>
+        Email
+             </td>
+             <td>
+        <input type="text" id="email" name="email" />
+             </td>
+         </tr>
+         <tr>
+             <td>
+        password 
+            </td>
+            <td> 
+         <input type="password" id="password" name="password" />
+            </td> 
+         </tr>
+         <br>
+         <tr>
+             <td>
+         <input type="submit" value="add admin">
+             </td>
+         </tr>
+            </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Add Movie</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function validate(){
+                var movieName=document.getElementById("movieName").value;
+                var releaseDate=document.getElementById("releaseDate").value;
+                var rate =document.getElementById("rate").value; 
+                var price=document.getElementById("price").value;
+                var description=document.getElementById("description").value;
+                
+                if(movieName===""){
+                    alert("please enter movie Name");
+                    return false;
+                }else if(releaseDate===""){
+                    alert("please enter release Date");
+                    return false;
+                }else if(rate===""){
+                    alert("please enter movie Rate");
+                    return false;
+                }else if(price===""){
+                    alert("please enter movie Price");
+                    return false;
+                    
+                }else if(description==="" ){
+                       alert("please enter movie Description");
+                    return false;
+                }else{
+                    return true;
+                }
+                return false;
+            }
+            
+            
+        </script>
+    </head>
+    <body>
+        <h2>Add New movie</h2>
+        <form  method="POST" action="InsertMovie" onsubmit="return validate()">
+            <table>
+                <tr>
+                    <td>
+                Movie Name         
+                    </td>
+                    <td>
+                        <input type="text" name="movieName" id="movieName" />
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        Movie release date
+                    </td>
+                    <td>
+                        <input type="text" name="releaseDate" id="releaseDate" />
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        Movie Rate
+                    </td>
+                    <td>
+                        <input type="text" name="rate" id="rate" />
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                Price        
+                    </td>
+                    <td>
+                        <input type="text" name="price" id="price" />   
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        Description 
+                    </td>
+                    <td>
+                        <input  style="height: 100px;width: 300px"  type="text" name="description" id="description"  />
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="add Movie"  />
+                    </td>
+                    
+                </tr>
+                
+                
+            </table>
+            
+            
+            
+        </form>
+    </body>
+</html>
